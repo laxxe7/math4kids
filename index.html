@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Math Learning App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding-top: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        #problem {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        input[type="number"] {
+            font-size: 18px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #feedback {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        #score {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        select {
+            font-size: 18px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kids Math Learning App</h1>
+    <div>
+        <label for="operation">Choose an operation:</label>
+        <select id="operation">
+            <option value="add">Addition</option>
+            <option value="sub">Subtraction</option>
+            <option value="mul">Multiplication</option>
+            <option value="div">Division</option>
+        </select>
+    </div>
+    <div id="problem">Press "New Problem" to Start</div>
+
+    <input type="number" id="answerInput" placeholder="Enter your answer">
+    <br>
+    <button onclick="checkAnswer()">Check Answer</button>
+    <button onclick="generateProblem()">New Problem</button>
+
+    <div id="feedback"></div>
+    <div id="score">Score: 0</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
